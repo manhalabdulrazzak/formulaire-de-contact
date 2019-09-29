@@ -1,0 +1,42 @@
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+.card{
+    background-color: #ffffff;
+    padding: 10px 30px 30px 70px;
+    border-radius: 10px;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.contact2-form-title {
+    display: block;
+    font-family: "Eras Bold ITC";
+    font-size: 39px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.bout{
+    text-align: center;
+}
+.btn{
+    background: #3F87A6 ;
+    margin-top: 20px;
+}
