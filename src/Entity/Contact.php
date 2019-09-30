@@ -35,7 +35,7 @@ class Contact
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
      * @Assert\Regex(
-     *     pattern="[0-9]{10}"
+     *     pattern="/[0-9]{10}/"
      * )
      */
     private $phone;
@@ -50,7 +50,7 @@ class Contact
     /**
      * @ORM\Column(type="text")
      * @Assert\NotBlank
-     * @Assert\Length(min=10)
+     * @Assert\Length(min=5)
      */
     private $message;
 

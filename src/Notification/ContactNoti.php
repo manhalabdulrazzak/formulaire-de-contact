@@ -30,7 +30,7 @@ class ContactNoti
             ->setTo('ewinssi@yahoo.fr')
             ->setReplyTo($contact->getEmail())
             ->setBody($this->renderer->render('contact.html.twig',[
-               $contact =>$contact ]),'text/html');
+               'contact' =>$contact ]),'text/html');
         $this->mailer->send($messaage);
     }
 }

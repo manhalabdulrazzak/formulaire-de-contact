@@ -4,4 +4,8 @@
 
 contact_form:
     path: /
+    methods: POST
     controller: App\Controller\ContactFController::index
+
+
+

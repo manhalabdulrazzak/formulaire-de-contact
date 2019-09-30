@@ -9,6 +9,20 @@
                 <div>
                     {{ form_start(form) }}
 
+                    {% block flash_messages %}
+                        {% for message in app.flashes('success') %}
+                            <div class="alert alert-success" role="alert">
+                                {{ message  }}
+                            </div>
+                        {% endfor %}
+                    {% endblock %}
+
+                    {% if not form.vars.valid %}
+                        <div class="alert alert-danger" role="alert">
+                            Le formulaire est incomplet
+                        </div>
+                    {% endif %}
+
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Prenom</label>
@@ -39,9 +53,10 @@
                         </div>
                      </div>
 
-                    <div class="form-row message">
+                    <div class="form-row message ">
                         <div class="col-md-12">
                             <label for="message">Message </label>
+                            <small id="emailHelp" class="form-text text-muted col-md-12">Votre méssage doit être composé d'au moins 10 mots</small>
                             {{ form_widget(form.message,{'attr': {'class': 'form-control','placeholder':'Entrez votre méssage','rows':'6'}}) }}
                         </div>
                     </div>
